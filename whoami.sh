@@ -1,6 +1,5 @@
 #!/bin/bash
-clear
-echo "Loading."
+clearecho "Loading."
 sleep 1
 clear
 echo "Loading.."
