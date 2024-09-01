@@ -1,13 +1,13 @@
 #!/bin/bash
 clear
 echo "Loading."
-sleep .9
+sleep 1
 clear
 echo "Loading.."
-sleep .8
+sleep 1
 clear
 echo "Loading..."
-sleep .7
+sleep 1
 clear
 echo "Done!"
 echo "Wellcome $(whoami)!"
