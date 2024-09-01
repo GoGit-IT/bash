@@ -2,5 +2,6 @@
 * Always make sure you NEVER run any scripts from untrusted sources!
 
 Usage:
+
 Run `wget -O - https://raw.githubusercontent.com/GoGit-IT/bash/Home/bashtest.sh | bash`
 or `wget -O - https://raw.githubusercontent.com/GoGit-IT/bash/Home/bashtest.sh | sudo bash` to see if you are able to run scripts from GitHub.
