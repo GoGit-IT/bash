@@ -17,12 +17,12 @@ case "$choice1" in
   y|Y )
 echo " "
 echo "$(echo -e ${YELLOW}Disabling Proxmox and Ceph enterprise edition repositories.${NC})"
-#sed -i '1s/^/#/' /etc/apt/sources.list.d/pve-enterprise.list
-#sed -i '1s/^/#/' /etc/apt/sources.list.d/ceph.list
+sed -i '1s/^/#/' /etc/apt/sources.list.d/pve-enterprise.list
+sed -i '1s/^/#/' /etc/apt/sources.list.d/ceph.list
 echo "$(echo -e ${YELLOW}Adding the no-subscription repository lists.${NC})"
-#sh -c 'echo "deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription" >> /etc/apt/sources.list.d/pve-enterprise.list'
-#sh -c 'echo "deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription" >> /etc/apt/sources.list.d/pve-enterprise.list'
-#sh -c 'echo "deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription" >> /etc/apt/sources.list'
+sh -c 'echo "deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription" >> /etc/apt/sources.list.d/pve-enterprise.list'
+sh -c 'echo "deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription" >> /etc/apt/sources.list.d/pve-enterprise.list'
+sh -c 'echo "deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription" >> /etc/apt/sources.list'
 echo " "
 echo "$(echo -e ${GREEN}Done.${NC})"
     sleep 1
@@ -76,7 +76,6 @@ echo "$(echo -e ${YELLOW}Choose what CPU your system has!${NC})"
 echo "$(echo -e ${YELLOW}1. AMD${NC})"
 echo "$(echo -e ${YELLOW}2. Intel${NC})"
 read -p "$(echo -e ${YELLOW}Enter 1 or 2: ${BLUE})" choice3
-
 if [ "$choice3" -eq 1 ]; then
     result=$(cat /sys/module/kvm_amd/parameters/nested)
     if [ "$result" == "Y" ]; then
