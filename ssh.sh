@@ -90,17 +90,17 @@ case "$choice4" in
 echo " "
 echo "$(echo -e ${YELLOW} SSHConfiguration done.${NC})"
 echo "$(echo -e ${YELLOW} Restarting sshd process in this LXC so changes take effect.${NC})"
-#    sudo systemctl mask ssh.socket
-#    sudo systemctl mask sshd.socket
-#    sudo systemctl disable sshd
-#    sudo systemctl enable ssh
+    sudo systemctl mask ssh.socket
+    sudo systemctl mask sshd.socket
+    sudo systemctl disable sshd
+    sudo systemctl enable ssh
     sleep 1
     break
     ;;
   n|N )
 echo "$(echo -e ${YELLOW} SSHConfiguration done.${NC})"
 echo "$(echo -e ${YELLOW} Restarting sshd process so changes take effect.${NC})"
-#    sudo systemctl restart sshd
+    sudo systemctl restart sshd
     sleep 2
     break
     ;;
